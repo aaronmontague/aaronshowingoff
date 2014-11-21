@@ -53,10 +53,7 @@
 				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav>
-            <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-                <!-- permalinked out of WP -->
-				<div class="nav-menu"><ul><li class="page_item page-item-2 current_page_parent"><a href="http://aaronshowingoff.com/exercises/Index.php" target="_blank">Non WP Items</a></li></ul></div>
-			</nav>
+            
 		</div>
 
 		<div id="search-container" class="search-box-wrapper hide">
