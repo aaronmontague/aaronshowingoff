@@ -8,6 +8,13 @@
     <RootNamespace>aaronshowingoff</RootNamespace>
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
     <AssemblyName>aaronshowingoff</AssemblyName>
+    <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+    <Server>PHPDev</Server>
+    <PublishEvent>None</PublishEvent>
+    <PHPDevAutoPort>False</PHPDevAutoPort>
+    <PHPDevPort>22</PHPDevPort>
+    <PHPDevHostName>aaronshowingoff.com</PHPDevHostName>
+    <IISProjectUrl>http://localhost:51149/</IISProjectUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
