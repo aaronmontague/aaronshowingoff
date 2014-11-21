@@ -42,10 +42,11 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1 class="site-title"><a href="http://www.google.com"<?php // echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<div class="search-toggle">
 				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+                
 			</div>
 
 			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
@@ -57,8 +58,11 @@
 
 		<div id="search-container" class="search-box-wrapper hide">
 			<div class="search-box">
-				<?php get_search_form(); ?>
+				
+            <?php get_search_form(); ?>
+
 			</div>
+           
 		</div>
 	</header><!-- #masthead -->
 
