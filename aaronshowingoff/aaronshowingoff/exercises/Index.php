@@ -17,6 +17,7 @@ class Index
 
 <html>
     <body>
-        Hello There!
+        <h2>Various PHP Exercises:</h2>
+        <a href="reading_xml.php">XML Parsing</a>
     </body>
 </html>
