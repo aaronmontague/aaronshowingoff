@@ -5,25 +5,17 @@
 </head>
 <body>
     Select a State:
-    <br />
     <select>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+        <?php
+        $xml=simplexml_load_file("natural_gas.xml") or die("Error: Cannot create object");
+        //echo $xml->states->state[1]->title; 
+        foreach($xml->states->state as $state) {
+        ?><option value="<?php echo $state->id?>"><?php echo $state->title?></option>
+        <?php    
+        }
+        ?>
     </select>
-    <br />
-    <br />
-    <?php
-    $xml=simplexml_load_file("natural_gas.xml") or die("Error: Cannot create object");
-    //echo $xml->states->state[1]->title; 
-    foreach($xml->states->state as $state) {
-        //echo "State: " . $state->id . "<br>";
-        echo "State: " . $state->title . "<br>";
-        echo "Diesel Price: " . $state->d . "<br>";
-        echo "CNG Price: " . $state->cng . "<br>";
-        echo "LNG Price: " . $state->lng . "<br><br>";
-    }
-    ?>
+
+    <!-- create a div to display the prices in various states | perform minor calculations as well -->
 </body>
 </html>
