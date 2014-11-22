@@ -11,9 +11,9 @@
     <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
     <Server>PHPDev</Server>
     <PublishEvent>None</PublishEvent>
-    <PHPDevAutoPort>False</PHPDevAutoPort>
+    <PHPDevAutoPort>True</PHPDevAutoPort>
     <PHPDevPort>22</PHPDevPort>
-    <PHPDevHostName>aaronshowingoff.com</PHPDevHostName>
+    <PHPDevHostName>localhost</PHPDevHostName>
     <IISProjectUrl>http://localhost:51149/</IISProjectUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -27,5 +27,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="exercises\Index.php" />
+    <Compile Include="exercises\xml_dropdown.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="exercises\reading_xml.php" />
   </ItemGroup>
 </Project>
