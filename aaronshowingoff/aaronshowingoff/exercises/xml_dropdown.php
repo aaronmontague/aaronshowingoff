@@ -3,29 +3,52 @@
 <head>
     <title>Parsing XML into a Dropdown</title>
     <script type="text/javascript">
-        function update_prices(dog, url) {
+        function update_prices(dog) {
             //alert(dog.selectedIndex)
             var xmlhttp;
             var cows, bird, apple;
-            xmlhttp = new XMLHttpRequest();
+            //dog.selectedIndex -1 to account for empty first <option>
+            var elk = dog.selectedIndex - 1;
+            if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {// code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
             xmlhttp.onreadystatechange = function () {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    cows = "";
-                    bird = xmlhttp.responseXML.documentElement.getElementsByTagName("state");
-                    apple = bird[dog.selectedIndex].getElementsByTagName("id");
+                    apple = xmlhttp.responseText;
+                    //alert(apple);
+                    //http://stackoverflow.com/questions/14336381/responsetext-works-but-responsexml-is-always-null?lq=1 <-- help from here
+                    //still not sure why I can't return the xmlhttp.responseXML correctly 11/23/14
+                    // remove whitespaces from start and end
+                    apple = apple.replace(/^\s+|\s+$/g, '');
+                    //parse into DOM object
+                    var parser = new DOMParser();
+                    var xmlDoc;
                     try {
-                        cows += "State: " + apple[0].firstChild.nodeValue + "<br>";
+                        xmlDoc = parser.parseFromString(apple, "text/xml");
+                    } catch (e) {
+                        alert("XML parsing error.");
+                        return false;
+                    };
+                    //load the info
+                    //try is generally useless here, but good practice
+                    try {
+                        var bird = xmlDoc.getElementsByTagName("state");
+                        cows = "State Price: " + bird[elk].getElementsByTagName("id")[0].firstChild.nodeValue + "<br>";
                     }
                     catch (er) {
-                        cows += "State didn't work..." + dog.selectedIndex + "<br>"
+                        cows = "State didn't work..." + dog.selectedIndex + "<br>";
                     }
-                    cows += "Diesel Price: " + " xxx<br>";
-                    cows += "CNG Price: " + " xxx<br>";
-                    cows += "LNG Price: " + " xxx<br>";
+                    cows += "Diesel Price: $" + bird[elk].getElementsByTagName("d")[0].firstChild.nodeValue + "<br>";
+                    cows += "CNG Price: $" + bird[elk].getElementsByTagName("cng")[0].firstChild.nodeValue + "<br>";
+                    cows += "LNG Price: $" + bird[elk].getElementsByTagName("lng")[0].firstChild.nodeValue + "<br>";
                     document.getElementById('display_prices').innerHTML = cows;
                 }
             }
-            xmlhttp.open("GET", url, true);
+            xmlhttp.open("GET", "natural_gas.xml", true);
+            xmlhttp.setRequestHeader("Content-type", "text/xml");
             xmlhttp.send();
 
         }
@@ -33,11 +56,12 @@
 </head>
 <body>
     Select a State:
-    <select id="state_select" onchange="update_prices(this,'natural_gas.xml')">
+    <select id="state_select" onchange="update_prices(this)">
+        <option value="" selected="selected"></option>
         <?php
         $xml=simplexml_load_file("natural_gas.xml") or die("Error: Cannot create object");
         //echo $xml->states->state[1]->title; 
-        foreach($xml->states->state as $state) {
+        foreach($xml->state as $state) {
         ?><option value="<?php echo $state->id?>"><?php echo $state->title?></option>
         <?php    
         }
@@ -45,14 +69,6 @@
     </select>
     <br />
     <div id="display_prices">
-        State: 
-        <br />
-        LNG Price:
-        <br />
-        CNG Price:
-        <br />
-        Diesel Price:
-        <br />
     </div>
 
 </body>
