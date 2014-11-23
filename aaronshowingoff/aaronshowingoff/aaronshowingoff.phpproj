@@ -27,9 +27,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="exercises\Index.php" />
+    <Compile Include="exercises\note_read.php" />
     <Compile Include="exercises\xml_dropdown.php" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercises\note.xml" />
     <Content Include="exercises\reading_xml.php" />
   </ItemGroup>
 </Project>
