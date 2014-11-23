@@ -36,7 +36,7 @@
                     //try is generally useless here, but good practice
                     try {
                         var bird = xmlDoc.getElementsByTagName("state");
-                        cows = "State Price: " + bird[elk].getElementsByTagName("id")[0].firstChild.nodeValue + "<br>";
+                        cows = "State: " + bird[elk].getElementsByTagName("id")[0].firstChild.nodeValue + "<br>";
                     }
                     catch (er) {
                         cows = "State didn't work..." + dog.selectedIndex + "<br>";
