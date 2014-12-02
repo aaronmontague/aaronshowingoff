@@ -27,6 +27,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="exercises\cookie_change.php" />
+    <Compile Include="exercises\cookie_check.php" />
     <Compile Include="exercises\cookie_set.php" />
     <Compile Include="exercises\Index.php" />
     <Compile Include="exercises\note_read.php" />
