@@ -26,6 +26,7 @@
     <Folder Include="exercises\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exercises\cookie_set.php" />
     <Compile Include="exercises\Index.php" />
     <Compile Include="exercises\note_read.php" />
     <Compile Include="exercises\xml_dropdown.php" />
