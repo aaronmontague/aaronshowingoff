@@ -1,5 +1,5 @@
 <?php
-$cookie_name = "Aaron_Set";
+$cookie_name = "aaronshowingoff";
 $cookie_value = "aaronshowingoff_set";
 // 86400 seconds, not miliseconds = 1 day
 setcookie($cookie_name, $cookie_value, time() + (60 * 30), "/"); 
