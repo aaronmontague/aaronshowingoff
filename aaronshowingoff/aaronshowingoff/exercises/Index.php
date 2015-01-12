@@ -7,5 +7,9 @@
         <a href="cookie_set.php">Cookie Setting</a><br />
         <a href="cookie_change.php">Cookie Value Change</a><br />
         <a href="cookie_check.php">Cookie Value Check</a><br />
+        <!-- <h2>House Evaluator</h2>
+        <a href="house.php">Building List</a><br /> -->
+        <h2>JavaScript Animation:</h2>
+        <a href="saucer.php">Flying Saucer Animation</a>
     </body>
 </html>
