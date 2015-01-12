@@ -32,10 +32,14 @@
     <Compile Include="exercises\Index.php" />
     <Compile Include="exercises\note_read.php" />
     <Compile Include="exercises\house.php" />
+    <Compile Include="exercises\saucer.php" />
     <Compile Include="exercises\xml_dropdown.php" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercises\mixing.pde" />
     <Content Include="exercises\note.xml" />
     <Content Include="exercises\reading_xml.php" />
+    <Content Include="exercises\saucer.pde" />
+    <Content Include="exercises\test.js" />
   </ItemGroup>
 </Project>

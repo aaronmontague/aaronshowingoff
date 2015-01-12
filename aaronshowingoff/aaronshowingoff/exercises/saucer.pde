@@ -8,6 +8,8 @@ var btop = [220, 250, 240, 270, 220];
 
 var lightOn = [40, 240, 540, 740, 1040];
 
+size(400, 400);
+
 draw = function () {
     background(29, 40, 115);
     fill(255, 242, 0);
