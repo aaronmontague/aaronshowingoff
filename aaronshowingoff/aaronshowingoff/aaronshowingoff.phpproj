@@ -26,10 +26,13 @@
     <Folder Include="exercises\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exercises\beaver.php" />
+    <Compile Include="exercises\beaver_test.pde" />
     <Compile Include="exercises\cookie_change.php" />
     <Compile Include="exercises\cookie_check.php" />
     <Compile Include="exercises\cookie_set.php" />
     <Compile Include="exercises\Index.php" />
+    <Compile Include="exercises\beaver.pde" />
     <Compile Include="exercises\note_read.php" />
     <Compile Include="exercises\house.php" />
     <Compile Include="exercises\saucer.php" />
