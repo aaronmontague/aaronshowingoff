@@ -1,3 +1,5 @@
+size(400, 400);
+
 /* @pjs preload="images/cs-ohnoes.png"; */
 /* @pjs preload="images/GrassBlock.png"; */
 /* @pjs preload="images/Hopper-Happy.png"; */

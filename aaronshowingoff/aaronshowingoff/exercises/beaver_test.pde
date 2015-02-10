@@ -1,14 +1,11 @@
+
+
 /* @pjs preload="images/cs-ohnoes.png"; */
 /* @pjs preload="images/GrassBlock.png"; */
 /* @pjs preload="images/Hopper-Happy.png"; */
 /* @pjs preload="images/Hopper-Jumping.png"; */
 /* @pjs preload="images/Rock.png"; */
 
-void setup() {
-
-  size(400, 400);
-
-}
 
 /*
 var pointCheck = function(){
@@ -57,6 +54,7 @@ var btnWin = new Button({
         y: 250,
         label: "Start Over"
     });
+    
 //beaver object
 var Beaver = function(x, y) {
     this.x = x;
@@ -180,7 +178,7 @@ Victory.prototype.gameFinished = function(beaver){
 };
 
 // Hopper stays in the middle of the screen (no x axis movement)
-var beaver = new Beaver(20, 300);
+var beaver = new Beaver(200, 300);
 // fill the level completion arrays
 var maxLevel = 4;
 var sticksByLevel = [];
@@ -348,7 +346,7 @@ void draw = function() {
     else if(victory.hops === 0 && !victory.finished && moveState === 0){
         victory.levelFailed(beaver);
     }
-};
+}
 // next level or start over
 var resetLevel = function(){
     //reset the scoring
