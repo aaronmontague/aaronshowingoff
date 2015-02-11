@@ -1,4 +1,8 @@
-size(400, 400);
+void setup(){
+
+	size(400, 400);
+	
+}
 
 /* @pjs preload="images/cs-ohnoes.png"; */
 /* @pjs preload="images/GrassBlock.png"; */
@@ -223,7 +227,7 @@ for (var g = 0; g < width/20 + 20; g++) {
     grassXs.push(g*20);
 }
 
-draw = function() {
+void draw = function() {
     // static
     //sky
     background(227, 254, 255);
@@ -344,7 +348,7 @@ draw = function() {
     else if(victory.hops === 0 && !victory.finished && moveState === 0){
         victory.levelFailed(beaver);
     }
-};
+}
 // next level or start over
 var resetLevel = function(){
     //reset the scoring

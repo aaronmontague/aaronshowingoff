@@ -10,6 +10,7 @@
         <!-- <h2>House Evaluator</h2>
         <a href="house.php">Building List</a><br /> -->
         <h2>JavaScript Animation:</h2>
-        <a href="saucer.php">Flying Saucer Animation</a>
+        <a href="saucer.php">Flying Saucer Animation</a><br />
+        <a href="beaver.php">Beaver Video Game</a>
     </body>
 </html>

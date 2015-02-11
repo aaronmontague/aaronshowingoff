@@ -1,11 +1,25 @@
+void setup() {
+  size(400, 400);
+}
 
+/* @pjs preload="images/cs-ohnoes.gif"; */
+/* @pjs preload="images/GrassBlock.gif"; */
+/* @pjs preload="images/Hopper-Happy.gif"; */
+/* @pjs preload="images/Hopper-Jumping.gif"; */
+/* @pjs preload="images/Rock.gif"; */
 
-/* @pjs preload="images/cs-ohnoes.png"; */
-/* @pjs preload="images/GrassBlock.png"; */
-/* @pjs preload="images/Hopper-Happy.png"; */
-/* @pjs preload="images/Hopper-Jumping.png"; */
-/* @pjs preload="images/Rock.png"; */
+//load images for later use
+PImage ohNoes;
+PImage grassBlock;
+PImage hopperHappy;
+PImage hopperJumping;
+PImage rockGif;
 
+ohNoes = loadImage("images/cs-ohnoes.gif");
+grassBlock = loadImage("images/GrassBlock.gif");
+hopperHappy = loadImage("images/Hopper-Happy.gif");
+hopperJumping = loadImage("images/Hopper-Jumping.gif");
+rockGif = loadImage("images/Rock.gif");
 
 /*
 var pointCheck = function(){
@@ -48,19 +62,18 @@ var btnWin = new Button({
         x: 200,
         y: 250,
         label: "Next Level"
-    });
-    var btnLose = new Button({
+});
+var btnLose = new Button({
         x: 200,
         y: 250,
-        label: "Start Over"
-    });
-    
+       label: "Start Over"
+});
+
 //beaver object
 var Beaver = function(x, y) {
     this.x = x;
     this.y = y;
-    //this.img = getImage("creatures/Hopper-Happy");
-    this.img = loadImage("images/Hopper-Happy.png")
+    this.img = hopperHappy;
     this.sticks = 0;
     this.bonusSticks = 0;
     this.width = 40;
@@ -80,14 +93,12 @@ Beaver.prototype.draw = function() {
 };
 
 Beaver.prototype.hop = function() {
-    //this.img = getImage("creatures/Hopper-Happy");
-    this.img = loadImage("images/Hopper-Jumping.png")
+    this.img = hopperJumping;
     this.y -= 5;
 };
 
 Beaver.prototype.fall = function() {
-    //this.img = getImage("creatures/Hopper-Happy");
-    this.img = loadImage("images/Hopper-Happy.png")
+    this.img = hopperHappy;
     this.y += 5;
 };
 
@@ -110,6 +121,7 @@ Beaver.prototype.checkForRockHit = function(rock) {
         }
     }
 };
+
 //stick object
 var Stick = function(x, y) {
     this.x = x;
@@ -126,8 +138,7 @@ Stick.prototype.draw = function() {
 var Rock = function (x,y){
     this.x = x;
     this.y = y;
-    //this.image = getImage("cute/Rock");
-    this.image = loadImage("images/Rock.png")
+    this.img = rockGif;
     //make sure rock only takes off one stick
     this.stillHurts = 1;
     this.radius = 16;
@@ -135,7 +146,7 @@ var Rock = function (x,y){
 Rock.prototype.draw = function() {
     fill(102, 98, 102);
     //ellipse(this.x, this.y, this.radius *2, this.radius *1.4);
-    image(this.image, this.x-20, this.y-26, 40, 40);
+    image(this.img, this.x-20, this.y-26, 40, 40);
     stroke(250, 5, 5);
     strokeWeight(5);
     //point(this.x, this.y);
@@ -162,7 +173,7 @@ Victory.prototype.levelComplete = function(beaver){
 };
 
 Victory.prototype.levelFailed = function(beaver){
-    //beaver.img = getImage("creatures/OhNoes");
+    beaver.img = ohNoes;
     textAlign(CENTER);
     textSize(18);
     text("Level Failed!", beaver.x, beaver.y - 110);
@@ -208,6 +219,7 @@ var setSticks = function(){
     }
 };
 setSticks();
+
 // load rocks by level
 var rocks = [];
 var setRocks = function(){
@@ -217,6 +229,7 @@ var setRocks = function(){
     }
 };
 setRocks();
+
 //see if game is finished
 var lastLevelComplete = 0;
 var grassXs = [];
@@ -225,18 +238,19 @@ for (var g = 0; g < width/20 + 20; g++) {
     grassXs.push(g*20);
 }
 
-void draw = function() {
-    // static
+void draw() { 
+	// static
     //sky
     background(227, 254, 255);
-    //ground
+	//ground
     fill(130, 79, 43);
     rectMode(CORNER);
     rect(0, height*0.90, width, height*0.10);
-    //cycle the grass
+
+	//cycle the grass
          for (var i = 0; i < grassXs.length; i++) {
             //image(getImage("cute/GrassBlock"), grassXs[i], height*0.85, 20, 20);
-            image(loadImage("images/GrassBlock.png"), grassXs[i], height*0.85, 20, 20);
+			image(grassBlock, grassXs[i], height*0.85, 20, 20);
             if (moveState === 1){
                 grassXs[i] -= 1;
             }
@@ -244,8 +258,8 @@ void draw = function() {
                 grassXs[i] = width;
             }
         }
-       
-    // sticks move across the screen
+
+	// sticks move across the screen
     var sticksOnScreen = 0;
     for (var i = 0; i < sticks.length; i++) {
         sticks[i].draw();
@@ -258,7 +272,8 @@ void draw = function() {
             sticksOnScreen++;
         }
     }
-    //rock movement
+
+	//rock movement
     for (var rm = 0; rm < rocks.length; rm++) {
         rocks[rm].draw();
         beaver.checkForRockHit(rocks[rm], victory);
@@ -266,7 +281,8 @@ void draw = function() {
             rocks[rm].x -= 3;
         }
     }
-    //score and goal by level
+
+	//score and goal by level
     textSize(18);
     text("Level: " + level,20,15);
     text("Score: " + beaver.sticks + "/" + sticksByLevel[level-1], 20, 35);
@@ -285,20 +301,21 @@ void draw = function() {
     for (var i = 0; i < grassXs.length; i++) { 
         text(i + " " + grassXs[i],100,10+10*i);
     } */
-    
-    //check to see if the goal is already met (bonus time)
+
+	//check to see if the goal is already met (bonus time)
     if (beaver.sticks/sticks.length >= percentByLevel[level-1] && moveState === 1) {
         textSize(24);
         fill(255, 0, 0);
         text("Bonus Time", 250, 50);
         victory.bonustime = 1;
     }
+
     //check to see if level is complete
     if (beaver.sticks/sticks.length >= percentByLevel[level-1]){
         victory.finished = 1;
     }
-    
-    //hopping
+
+	//hopping
     if (keyPressed && keyCode === 0 && moveState === 1) {
         beaver.hop();
     } 
@@ -307,7 +324,8 @@ void draw = function() {
         beaver.fall();
     }
     beaver.draw();
-    //stop moving the level
+
+	//stop moving the level
     if (sticksOnScreen === 0){
         moveState = 0;
     }
@@ -346,6 +364,7 @@ void draw = function() {
     else if(victory.hops === 0 && !victory.finished && moveState === 0){
         victory.levelFailed(beaver);
     }
+
 }
 // next level or start over
 var resetLevel = function(){
@@ -375,3 +394,9 @@ mouseClicked = function() {
         } 
     }
 };
+
+void mousePressed() {
+
+  startLocation.x++;
+
+}
