@@ -10,8 +10,8 @@
 <div ng-app="" ng-controller="customersController"> 
 
 <ul>
-  <li ng-repeat="x in names">
-    {{ x.Name + ', ' + x.Country }}
+  <li ng-repeat="x in spork">
+    {{ x.Name + ' from: ' x.City + ' ' + x.Country }}
   </li>
 </ul>
 
@@ -20,7 +20,7 @@
 <script>
 function customersController($scope,$http) {
   $http.get("json.php")
-  .success(function(response) {$scope.names = response;});
+  .success(function(response) {$scope.spork = response;});
 }
 </script>
 

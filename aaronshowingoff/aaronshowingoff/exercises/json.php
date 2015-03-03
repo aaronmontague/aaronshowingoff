@@ -5,7 +5,7 @@
 "Country" : "Germany"
 },
 {
-"Name" : "Berglunds snabbköp",
+"Name" : "Berglunds snabbkop",
 "City" : "Luleå",
 "Country" : "Sweden"
 },
@@ -25,7 +25,7 @@
 "Country" : "Spain"
 },
 {
-"Name" : "Galería del gastrónomo",
+"Name" : "Galería del gastronomo",
 "City" : "Barcelona",
 "Country" : "Spain"
 },
@@ -35,7 +35,7 @@
 "Country" : "UK"
 },
 {
-"Name" : "Königlich Essen",
+"Name" : "Koniglich Essen",
 "City" : "Brandenburg",
 "Country" : "Germany"
 },
@@ -55,7 +55,7 @@
 "Country" : "UK"
 },
 {
-"Name" : "Paris spécialités",
+"Name" : "Paris specialites",
 "City" : "Paris",
 "Country" : "France"
 },
