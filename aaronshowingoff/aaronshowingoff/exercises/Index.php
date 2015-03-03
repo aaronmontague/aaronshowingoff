@@ -13,7 +13,7 @@
         <a href="saucer.php">Flying Saucer Animation</a><br />
         <a href="beaver.php">Beaver Video Game</a><br />
         <h2>AngularJS:</h2>
-        <a href="angular_text.php">Text Manipulation</a>
-        <a href="json_read.php">Local JSON Lookup</a>
+        <a href="angular_text.php">Text Manipulation</a><br />
+        <a href="json_read.php">Local JSON Lookup</a><br />
     </body>
 </html>

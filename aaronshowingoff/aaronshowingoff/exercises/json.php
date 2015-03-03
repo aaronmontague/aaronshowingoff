@@ -6,12 +6,12 @@
 },
 {
 "Name" : "Berglunds snabbkop",
-"City" : "Luleå",
+"City" : "Lulea",
 "Country" : "Sweden"
 },
 {
 "Name" : "Centro comercial Moctezuma",
-"City" : "México D.F.",
+"City" : "Mexico D.F.",
 "Country" : "Mexico"
 },
 {
@@ -25,7 +25,7 @@
 "Country" : "Spain"
 },
 {
-"Name" : "Galería del gastronomo",
+"Name" : "Galeria del gastronomo",
 "City" : "Barcelona",
 "Country" : "Spain"
 },
@@ -66,7 +66,7 @@
 },
 {
 "Name" : "Simons bistro",
-"City" : "København",
+"City" : "Kobenhavn",
 "Country" : "Denmark"
 },
 {
@@ -76,7 +76,7 @@
 },
 {
 "Name" : "Vaffeljernet",
-"City" : "Århus",
+"City" : "Arhus",
 "Country" : "Denmark"
 },
 {
