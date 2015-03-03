@@ -13,6 +13,6 @@
         <a href="saucer.php">Flying Saucer Animation</a><br />
         <a href="beaver.php">Beaver Video Game</a><br />
         <h2>AngularJS:</h2>
-        <a href="angular_text.php">Non Include Module/Controller</a>
+        <a href="angular_text.php">Text Manipulation</a>
     </body>
 </html>

@@ -26,6 +26,8 @@
     <Folder Include="exercises\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exercises\angular_text_includes.php" />
+    <Compile Include="exercises\angular_text.php" />
     <Compile Include="exercises\beaver.php" />
     <Compile Include="exercises\beaver_test.pde" />
     <Compile Include="exercises\cookie_change.php" />
@@ -40,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="exercises\mixing.pde" />
+    <Content Include="exercises\nameSwapModule.js" />
     <Content Include="exercises\note.xml" />
     <Content Include="exercises\reading_xml.php" />
     <Content Include="exercises\saucer.pde" />
