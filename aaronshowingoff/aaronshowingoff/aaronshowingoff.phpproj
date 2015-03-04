@@ -35,6 +35,8 @@
     <Compile Include="exercises\cookie_set.php" />
     <Compile Include="exercises\Index.php" />
     <Compile Include="exercises\beaver.pde" />
+    <Compile Include="exercises\json.php" />
+    <Compile Include="exercises\json_read.php" />
     <Compile Include="exercises\note_read.php" />
     <Compile Include="exercises\house.php" />
     <Compile Include="exercises\saucer.php" />
