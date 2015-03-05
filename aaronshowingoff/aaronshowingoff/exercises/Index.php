@@ -14,6 +14,7 @@
         <a href="beaver.php">Beaver Video Game</a><br />
         <h2>AngularJS:</h2>
         <a href="angular_text.php">Text Manipulation</a><br />
+        <a href="angular_text_includes.php">Text Manipulation (scripts external)</a><br />
         <a href="json_read.php">Local JSON Lookup</a><br />
         <h2>jQuery:</h2>
         <a href="jquery_hello_world.php">Hello Animation</a><br />
