@@ -19,5 +19,7 @@
         <h2>jQuery:</h2>
         <a href="jquery_hello_world.php">Hello Animation</a><br />
         <a href="panels_buttons.php">Div Manipulation</a>
+        <h2>AJAX:</h2>
+        <a href="ajaxStateCode.php">AJAX Page States</a><br />
     </body>
 </html>
