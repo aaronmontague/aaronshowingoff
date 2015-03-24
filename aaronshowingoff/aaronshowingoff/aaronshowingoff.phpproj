@@ -28,6 +28,8 @@
   <ItemGroup>
     <Compile Include="exercises\ajaxStateCode.php" />
     <Compile Include="exercises\ajax_info.txt" />
+    <Compile Include="exercises\angular_ng_repeat.php" />
+    <Compile Include="exercises\angular_customers.php" />
     <Compile Include="exercises\angular_text_includes.php" />
     <Compile Include="exercises\angular_text.php" />
     <Compile Include="exercises\beaver.php" />

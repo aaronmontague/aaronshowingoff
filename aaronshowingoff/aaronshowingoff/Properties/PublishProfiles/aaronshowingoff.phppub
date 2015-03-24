@@ -3,7 +3,7 @@
   <PropertyGroup>
     <DeleteExistingFiles>False</DeleteExistingFiles>
     <SkipRemoteFilesCheck>True</SkipRemoteFilesCheck>
-    <publishUrl>aaronshowingoff.com</publishUrl>
+    <publishUrl>ftp.aaronshowingoff.com</publishUrl>
     <UserName>aaro2321253830</UserName>
     <_SavePWD>True</_SavePWD>
     <FtpSitePath />
