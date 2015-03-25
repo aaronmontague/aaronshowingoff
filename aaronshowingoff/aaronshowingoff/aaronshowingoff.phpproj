@@ -28,6 +28,7 @@
   <ItemGroup>
     <Compile Include="exercises\ajaxStateCode.php" />
     <Compile Include="exercises\ajax_info.txt" />
+    <Compile Include="exercises\angular_directvies.php" />
     <Compile Include="exercises\angular_ng_repeat.php" />
     <Compile Include="exercises\angular_customers.php" />
     <Compile Include="exercises\angular_text_includes.php" />
@@ -49,12 +50,14 @@
     <Compile Include="exercises\xml_dropdown.php" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercises\customersController.js" />
     <Content Include="exercises\mixing.pde" />
     <Content Include="exercises\nameSwapController.js" />
     <Content Include="exercises\nameSwapModule.js" />
     <Content Include="exercises\note.xml" />
     <Content Include="exercises\reading_xml.php" />
     <Content Include="exercises\saucer.pde" />
+    <Content Include="exercises\Styles.css" />
     <Content Include="exercises\test.js" />
   </ItemGroup>
 </Project>
