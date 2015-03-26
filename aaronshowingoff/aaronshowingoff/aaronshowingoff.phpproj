@@ -24,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="exercises\" />
+    <Folder Include="exercises\toDoApp\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="exercises\ajaxStateCode.php" />
@@ -50,14 +51,29 @@
     <Compile Include="exercises\xml_dropdown.php" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="exercises\angular-route.js" />
+    <Content Include="exercises\app.js" />
+    <Content Include="exercises\catsFactory.js" />
     <Content Include="exercises\customersController.js" />
+    <Content Include="exercises\catTemplate.html" />
+    <Content Include="exercises\customersService.js" />
+    <Content Include="exercises\customersFactory.js" />
+    <Content Include="exercises\customersTemplate.html" />
     <Content Include="exercises\mixing.pde" />
     <Content Include="exercises\nameSwapController.js" />
     <Content Include="exercises\nameSwapModule.js" />
     <Content Include="exercises\note.xml" />
+    <Content Include="exercises\catNickNameController.js" />
+    <Content Include="exercises\ordersController.js" />
+    <Content Include="exercises\catNickNameTemplate.html" />
+    <Content Include="exercises\ordersTemplate.html" />
     <Content Include="exercises\reading_xml.php" />
     <Content Include="exercises\saucer.pde" />
     <Content Include="exercises\Styles.css" />
     <Content Include="exercises\test.js" />
+    <Content Include="exercises\toDoApp\functions.js" />
+    <Content Include="exercises\toDoApp\index.html" />
+    <Content Include="exercises\toDoApp\styles.css" />
+    <Content Include="exercises\values.js" />
   </ItemGroup>
 </Project>

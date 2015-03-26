@@ -1,35 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="">
+<html lang="en" data-ng-app="crazyCatLadyApp">
 
 <head>
     <title>AngularJS Customer Page</title>
     <link href="Styles.css" rel="stylesheet" type="text/css" />
     <script></script>
 </head>
-    https://www.udemy.com/angularjs-jumpstart/#/lecture/1000214
-<body data-ng-controller="CustomersController">
-    <h2>Customers</h2>
-    Search by Name: <input type="text" data-ng-model="customerFilter.name"/>
-    Search by City: <input type="text" data-ng-model="customerFilter.city"/>
-
-    <table>
-        <tr>
-            <th data-ng-click="doSort('name')">Name</th>
-            <th data-ng-click="doSort('city')">City</th>
-            <th data-ng-click="doSort('joined')">Date Started</th>
-            <th data-ng-click="doSort('orderTotal')">Order Total</th>
-        </tr>
-        <tr data-ng-repeat="customer in customers | filter:customerFilter | orderBy:sortBy:!reverse">
-            <td>{{ customer.name}}</td>
-            <td>{{ customer.city}}</td>
-            <td>{{ customer.joined | date:'longDate'}}</td>
-            <td>{{ customer.orderTotal | currency}}</td>
-        </tr>
-    </table>
-    <br />
-    Customer Length: {{ customers.length }}
+    
+<body>
+    <div data-ng-view></div>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="app.js"></script>
     <script src="customersController.js"></script>
+    <script src="ordersController.js"></script>
+    <script src="catNickNameController.js"></script>
+    <script src="customersFactory.js"></script>
+    <script src="catsFactory.js"></script>
+    <script src="values.js"></script>
 
 </body>
 </html>
