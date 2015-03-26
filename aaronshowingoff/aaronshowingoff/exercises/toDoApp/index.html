@@ -5,12 +5,12 @@
 </head>
 
 <body>
-    <div ng-app>
-        <div id="todoapp" ng-controller="TodoCtrl">
+    <div data-ng-app="">
+        <div id="todoapp" data-ng-controller="TodoCtrl">
             <header>
                 <h1>To Do List</h1>
-                <input id="new-todo" type="text" ng-model="todoText" size="30"
-                       placeholder="What needs to be done?" ng-keyup="addTodo()" />
+                <input id="new-todo" type="text" data-ng-model="todoText" size="30"
+                       placeholder="What needs to be done?" data-ng-keyup="addTodo()" />
                 <link href="styles.css" rel="stylesheet" type="text/css" />
             </header>
 
