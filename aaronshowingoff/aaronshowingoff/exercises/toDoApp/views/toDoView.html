@@ -1,0 +1,32 @@
+<div>
+    <div id="todoapp">
+        <header>
+            <h1>To Do List</h1>
+            <input id="new-todo" type="text" data-ng-model="todoText" size="30"
+                   placeholder="What needs to be done?" data-ng-keyup="addTodo()" />
+        </header>
+
+        <section id="main" style="display: block;">
+            <div data-ng-show="isTodo()">
+                <button id="toggle-all" data-ng-click="toggleMarkAll()">{{ toggleText }}</button>
+            </div>
+
+            <ul id="todo-list" class="unstyled">
+                <li data-ng-repeat="todo in todos" data-ng-dblclick="toggleEditMode()">
+                    <div class="view" data-ng-keyup="editTodo()">
+                        <input type="checkbox" data-ng-model="todo.done" />
+                        <span class="done-{{todo.done}}">{{todo.text}}</span>
+                    </div>
+                    <input class="edit" type="text" data-ng-model="todo.text" data-ng-keyup="editOnEnter(todo)" />
+                </li>
+            </ul>
+        </section>
+
+        <footer style="display: block;">
+            <div class="todo-count">{{remaining()}} of {{todos.length}} remaining</div>
+            <a id="clear-completed" data-ng-click="clear()" data-ng-show="hasDone()">
+                Clear <span>{{(todos.length - remaining())}} {{itemText()}}</span>.
+            </a>
+        </footer>
+    </div>
+</div>

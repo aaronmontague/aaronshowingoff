@@ -1,43 +1,17 @@
-﻿<html>
+<!DOCTYPE html>
+<html lang="en" data-ng-app="listMakeApp">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <title>To Do List</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script></script>
 </head>
 
 <body>
-    <div data-ng-app="">
-        <div id="todoapp" data-ng-controller="TodoCtrl">
-            <header>
-                <h1>To Do List</h1>
-                <input id="new-todo" type="text" data-ng-model="todoText" size="30"
-                       placeholder="What needs to be done?" data-ng-keyup="addTodo()" />
-                <link href="styles.css" rel="stylesheet" type="text/css" />
-            </header>
-
-            <section id="main" style="display: block;">
-                <div data-ng-show="isTodo()">
-                    <button id="toggle-all" data-ng-click="toggleMarkAll()">{{ toggleText }}</button>
-                </div>
-
-                <ul id="todo-list" class="unstyled">
-                    <li data-ng-repeat="todo in todos" data-ng-dblclick="toggleEditMode()">
-                        <div class="view" data-ng-keyup="editTodo()">
-                            <input type="checkbox" data-ng-model="todo.done" />
-                            <span class="done-{{todo.done}}">{{todo.text}}</span>
-                        </div>
-                        <input class="edit" type="text" data-ng-model="todo.text" data-ng-keyup="editOnEnter(todo)" />
-                    </li>
-                </ul>
-            </section>
-
-            <footer style="display: block;">
-                <div class="todo-count">{{remaining()}} of {{todos.length}} remaining</div>
-                <a id="clear-completed" data-ng-click="clear()" data-ng-show="hasDone()">
-                    Clear <span>{{(todos.length - remaining())}} {{itemText()}}</span>.
-                </a>
-            </footer>
-        </div>
-    </div>
-    <script src="functions.js"></script>
+    <div data-ng-view></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <!-- always call app.js first :) -->
+    <script src="scripts/app.js"></script>
+    <script src="controllers/toDoController.js"></script>
 </body>
 </html>

@@ -1,9 +1,12 @@
-﻿function TodoCtrl($scope) {
-    $scope.todos = [];
+(function () {
+
+    var toDoController = function ($scope) {
+
+    $scope.todos = [{text: 'John', done: false},{text: 'Aaron', done: false}];
     $scope.markAll = true;
     $scope.toggleText = 'Mark All Finished';
 
-    $scope.addTodo = function () {
+     $scope.addTodo = function () {
         if (event.keyCode === 13 && $scope.todoText) {
             $scope.todos.push({ text: $scope.todoText, done: false });
             $scope.todoText = '';
@@ -57,6 +60,13 @@
             if (!todo.done) $scope.todos.push(todo);
         });
     };
+        
+    };
 
-}
+    //protect against minification
+    toDoController.$inject = ['$scope'];
 
+    angular.module('listMakeApp')
+        .controller('toDoController', toDoController);
+
+}());
