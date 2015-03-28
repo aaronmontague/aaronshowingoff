@@ -12,7 +12,8 @@
         }
         
         init();
-
+        
+        //add new item
         $scope.addTodo = function () {
             if (event.keyCode === 13 && $scope.todoText) {
                 $scope.todos.push({ text: $scope.todoText, done: false });
@@ -20,17 +21,22 @@
             }
         };
         
+        //returns not false essentially
         $scope.isTodo = function () {
             return $scope.todos.length > 0;
         };
         
-        $scope.toggleEditMode = function () {
-            $(event.target).closest('LI').toggleClass('editing');
+        $scope.enterEditMode = function () {
+            $(event.target).closest('LI').addClass('editing');
         };
         
-        $scope.editOnEnter = function (todo) {
+        $scope.exitEditMode = function () {
+            $(event.target).closest('LI').removeClass('editing');
+        };
+        
+        $scope.commitEdit = function (todo) {
             if (event.keyCode === 13 && todo.text) {
-                $scope.toggleEditMode();
+                $scope.exitEditMode();
             }
         };
         
