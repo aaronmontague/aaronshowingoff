@@ -24,8 +24,8 @@
             return $scope.todos.length > 0;
         };
         
-        /*$scope.toggleEditMode = function () {
-            $(event.target).closest('li').toggleClass('editing');
+        $scope.toggleEditMode = function () {
+            $(event.target).closest('LI').toggleClass('editing');
         };
         
         $scope.editOnEnter = function (todo) {
@@ -33,7 +33,6 @@
                 $scope.toggleEditMode();
             }
         };
-        */
         
         $scope.remaining = function () {
             var count = 0;
