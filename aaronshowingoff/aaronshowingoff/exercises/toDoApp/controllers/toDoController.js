@@ -27,7 +27,9 @@
         };
         
         $scope.enterEditMode = function () {
-            $(event.target).closest('LI').addClass('editing');
+            $(event.target).closest("LI").addClass("editing");
+            //put focus on <input>
+            //$(event.target).children(".edit").focus();
         };
         
         $scope.exitEditMode = function () {

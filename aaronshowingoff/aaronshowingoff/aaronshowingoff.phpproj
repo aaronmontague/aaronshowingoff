@@ -87,11 +87,10 @@
     <Content Include="exercises\Styles.css" />
     <Content Include="exercises\test.js" />
     <Content Include="exercises\toDoApp\controllers\toDoController.js" />
-    <Content Include="exercises\toDoApp\functions.js" />
+    <Content Include="exercises\toDoApp\controllers\toDoItemsFactory.js" />
     <Content Include="exercises\toDoApp\index.html" />
     <Content Include="exercises\toDoApp\scripts\angular-route.js" />
     <Content Include="exercises\toDoApp\scripts\app.js" />
-    <Content Include="exercises\toDoApp\scripts\functions.js" />
     <Content Include="exercises\toDoApp\styles.css" />
     <Content Include="exercises\toDoApp\views\2.html" />
     <Content Include="exercises\toDoApp\views\toDoView.html" />
