@@ -24,7 +24,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="exercises\" />
+    <Folder Include="exercises\images\" />
     <Folder Include="exercises\toDoApp\" />
+    <Folder Include="exercises\toDoApp\controllers\" />
+    <Folder Include="exercises\toDoApp\scripts\" />
+    <Folder Include="exercises\toDoApp\views\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="exercises\ajaxStateCode.php" />
@@ -59,6 +63,17 @@
     <Content Include="exercises\customersService.js" />
     <Content Include="exercises\customersFactory.js" />
     <Content Include="exercises\customersTemplate.html" />
+    <Content Include="exercises\images\cs-ohnoes.gif" />
+    <Content Include="exercises\images\cs-ohnoes.png" />
+    <Content Include="exercises\images\GrassBlock.gif" />
+    <Content Include="exercises\images\GrassBlock.png" />
+    <Content Include="exercises\images\Hopper-Happy.gif" />
+    <Content Include="exercises\images\Hopper-Happy.png" />
+    <Content Include="exercises\images\Hopper-Happy.psd" />
+    <Content Include="exercises\images\Hopper-Jumping.gif" />
+    <Content Include="exercises\images\Hopper-Jumping.png" />
+    <Content Include="exercises\images\Rock.gif" />
+    <Content Include="exercises\images\Rock.png" />
     <Content Include="exercises\mixing.pde" />
     <Content Include="exercises\nameSwapController.js" />
     <Content Include="exercises\nameSwapModule.js" />
@@ -71,9 +86,15 @@
     <Content Include="exercises\saucer.pde" />
     <Content Include="exercises\Styles.css" />
     <Content Include="exercises\test.js" />
+    <Content Include="exercises\toDoApp\controllers\toDoController.js" />
     <Content Include="exercises\toDoApp\functions.js" />
     <Content Include="exercises\toDoApp\index.html" />
+    <Content Include="exercises\toDoApp\scripts\angular-route.js" />
+    <Content Include="exercises\toDoApp\scripts\app.js" />
+    <Content Include="exercises\toDoApp\scripts\functions.js" />
     <Content Include="exercises\toDoApp\styles.css" />
+    <Content Include="exercises\toDoApp\views\2.html" />
+    <Content Include="exercises\toDoApp\views\toDoView.html" />
     <Content Include="exercises\values.js" />
   </ItemGroup>
 </Project>

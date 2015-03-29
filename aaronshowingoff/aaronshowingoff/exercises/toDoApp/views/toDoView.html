@@ -12,12 +12,12 @@
             </div>
 
             <ul id="todo-list" class="unstyled">
-                <li data-ng-repeat="todo in todos" data-ng-dblclick="enterEditMode()">
+                <li data-ng-repeat="todo in todos" data-ng-click="enterEditMode()">
                     <div class="view">
                         <input type="checkbox" data-ng-model="todo.done" />
                         <span class="done-{{todo.done}}">{{todo.text}}</span>
                     </div>
-                    <input class="edit" type="text" data-ng-model="todo.text" data-ng-keyup="commitEdit(todo)" />
+                    <input class="edit" type="text" data-ng-model="todo.text" data-ng-keyup="commitEdit(todo)" data-ng-mouseleave="exitEditMode()" />
                 </li>
             </ul>
         </section>
@@ -28,5 +28,11 @@
                 Clear <span>{{(todos.length - remaining())}} {{itemText()}}</span>.
             </a>
         </footer>
+
+        <!--<ul>
+            <li data-ng-repeat="todo in todos">
+                {{ todo.text }} : {{ todo.done }}
+            </li>
+        </ul>-->
     </div>
 </div>
