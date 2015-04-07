@@ -22,6 +22,10 @@
             <td>{{ bonk.city }}</td>
         </tr>
     </table>
+    <br />
+    <select>
+        <option data-ng-repeat="bonk in people" value="{{bonk.city}}">{{bonk.name}}</option>
+    </select>
 </div>
 
 
