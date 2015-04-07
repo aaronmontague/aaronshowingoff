@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app>
+<html lang="en">
 
 <head>
 <script ></script>
 </head>
 
 <body>
-<div data-ng-init="people=[{name: 'John', city:'Brookline'},{name: 'Renee', city:'Somerville'},{name: 'Shannon', city:'San Fran'},{name: 'Mike', city:'San Fran'},]">
+<div data-ng-app="nameSwap" data-ng-controller="formController">
     <h3>Iterating through data with ng-repeat</h3>
     <ul>
         <li data-ng-repeat="bonk in people">{{ bonk.name }} lives in {{bonk.city}}</li>
@@ -23,14 +23,30 @@
         </tr>
     </table>
     <br />
-    <select>
-        <option data-ng-repeat="bonk in people" value="{{bonk.city}}">{{bonk.name}}</option>
+    <select data-ng-model="currentSelection" data-ng-options="bonk.name for bonk in people">
     </select>
+    <span>The selected person resides in: {{ currentSelection.city }}</span>
 </div>
 
-
 <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js">
+</script>
+    
+<script>
+var app = angular.module("nameSwap", []);
 
+app.controller("formController", function($scope) {
+    $scope.people = [
+        {name: 'Aaron', city:'Brookline'},
+        {name: 'Renee', city:'Somerville'},
+        {name: 'Shannon', city:'San Fran'},
+        {name: 'Mike', city:'San Fran'}
+    ];
+    $scope.currentSelection = $scope.people[0];
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+    };
+    
+});    
 </script>
 
 </body>
