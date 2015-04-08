@@ -84,6 +84,7 @@
     <Content Include="exercises\ordersTemplate.html" />
     <Content Include="exercises\reading_xml.php" />
     <Content Include="exercises\saucer.pde" />
+    <Content Include="exercises\server.js" />
     <Content Include="exercises\Styles.css" />
     <Content Include="exercises\test.js" />
     <Content Include="exercises\toDoApp\controllers\toDoController.js" />
