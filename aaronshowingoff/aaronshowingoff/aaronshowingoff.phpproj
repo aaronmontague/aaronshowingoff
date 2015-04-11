@@ -25,6 +25,7 @@
   <ItemGroup>
     <Folder Include="exercises\" />
     <Folder Include="exercises\images\" />
+    <Folder Include="exercises\mordheim\" />
     <Folder Include="exercises\toDoApp\" />
     <Folder Include="exercises\toDoApp\controllers\" />
     <Folder Include="exercises\toDoApp\scripts\" />
@@ -48,6 +49,7 @@
     <Compile Include="exercises\jquery_hello_world.php" />
     <Compile Include="exercises\json.php" />
     <Compile Include="exercises\json_read.php" />
+    <Compile Include="exercises\mordheim\mordheim.php" />
     <Compile Include="exercises\note_read.php" />
     <Compile Include="exercises\house.php" />
     <Compile Include="exercises\panels_buttons.php" />
@@ -75,13 +77,23 @@
     <Content Include="exercises\images\Rock.gif" />
     <Content Include="exercises\images\Rock.png" />
     <Content Include="exercises\mixing.pde" />
+    <Content Include="exercises\mordheim\app.js" />
+    <Content Include="exercises\mordheim\catNickNameController.js" />
+    <Content Include="exercises\mordheim\catNickNameTemplate.html" />
+    <Content Include="exercises\mordheim\catsFactory.js" />
+    <Content Include="exercises\mordheim\catTemplate.html" />
+    <Content Include="exercises\mordheim\customersController.js" />
+    <Content Include="exercises\mordheim\Styles.css" />
+    <Content Include="exercises\mordheim\values.js" />
     <Content Include="exercises\nameSwapController.js" />
     <Content Include="exercises\nameSwapModule.js" />
+    <Content Include="exercises\natural_gas.xml" />
     <Content Include="exercises\note.xml" />
     <Content Include="exercises\catNickNameController.js" />
     <Content Include="exercises\ordersController.js" />
     <Content Include="exercises\catNickNameTemplate.html" />
     <Content Include="exercises\ordersTemplate.html" />
+    <Content Include="exercises\processing-1.4.8.min.js" />
     <Content Include="exercises\reading_xml.php" />
     <Content Include="exercises\saucer.pde" />
     <Content Include="exercises\server.js" />
