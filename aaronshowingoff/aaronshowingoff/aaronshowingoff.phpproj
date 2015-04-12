@@ -78,11 +78,13 @@
     <Content Include="exercises\images\Rock.png" />
     <Content Include="exercises\mixing.pde" />
     <Content Include="exercises\mordheim\app.js" />
+    <Content Include="exercises\mordheim\catsFactory.js" />
+    <Content Include="exercises\mordheim\warbandMemberController.js" />
     <Content Include="exercises\mordheim\catNickNameController.js" />
     <Content Include="exercises\mordheim\catNickNameTemplate.html" />
-    <Content Include="exercises\mordheim\catsFactory.js" />
+    <Content Include="exercises\mordheim\warbandsFactory.js" />
     <Content Include="exercises\mordheim\catTemplate.html" />
-    <Content Include="exercises\mordheim\customersController.js" />
+    <Content Include="exercises\mordheim\warbandsController.js" />
     <Content Include="exercises\mordheim\Styles.css" />
     <Content Include="exercises\mordheim\values.js" />
     <Content Include="exercises\nameSwapController.js" />

@@ -1,5 +1,5 @@
-﻿angular.module('customersApp').value('appSettings', {
-    title: 'Customer App',
+﻿angular.module('warbandApp').value('appSettings', {
+    title: 'Mordheim',
     version: '1.0'
 });
 
