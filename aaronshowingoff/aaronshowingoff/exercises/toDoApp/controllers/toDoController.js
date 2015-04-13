@@ -36,6 +36,7 @@
             $(event.target).closest('LI').removeClass('editing');
         };
         
+        //use enter key to leave in line editing
         $scope.commitEdit = function (todo) {
             if (event.keyCode === 13 && todo.text) {
                 $scope.exitEditMode();
