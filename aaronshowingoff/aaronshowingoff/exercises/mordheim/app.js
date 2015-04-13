@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
 
     var app = angular.module('warbandApp', ['ngRoute']);
 
@@ -7,12 +7,17 @@
             .when('/',
             {
                 controller: 'WarbandsController',
-                templateUrl: 'customersTemplate.html'
+                templateUrl: 'warbandTemplate.html'
             })
-            .when('/warbands/:warbandMemberID',
+            .when('/warbands/:warbandID',
+            {
+                controller: 'WarbandsController',
+                templateUrl: 'warbandTemplate.html'
+            })
+            .when('/warbandMember/:warbandMemberID',
             {
                 controller: 'WarbandMembersController',
-                templateUrl: 'warbandMembersTemplate.html'
+                templateUrl: 'warbandMemberTemplate.html'
             })
             .otherwise({ redirectTo: '/' });
     });

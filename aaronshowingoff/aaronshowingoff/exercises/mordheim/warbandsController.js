@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
 
     var catLadyCustomers = function ($scope, catsFactory, catSettings) {
 
@@ -17,13 +17,13 @@
         };
     };
 
-    var warbands = function ($scope, warbandsFactory, appSettings) {
+    var warbands = function ($scope, warbandsFactory, warbandSettings) {
         
-        $scope.customers = [];
-        $scope.appSettings = appSettings;
+        $scope.warbands = [];
+        $scope.warbandSettings = warbandSettings;
 
         function init() {
-            $scope.customers = warbandsFactory.getWarbands();
+            $scope.warbands = warbandsFactory.getWarbands();
         };
 
         init();
@@ -35,7 +35,7 @@
     };
 
     //protect against minification
-    warbands.$inject = ['$scope', 'warbandFactory', 'appSettings'];
+    warbands.$inject = ['$scope', 'warbandsFactory', 'warbandSettings'];
     catLadyCustomers.$inject = ['$scope', 'catsFactory','catSettings'];
 
     angular.module('warbandApp')

@@ -1,4 +1,4 @@
-﻿angular.module('warbandApp').value('appSettings', {
+angular.module('warbandApp').value('warbandSettings', {
     title: 'Mordheim',
     version: '1.0'
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="crazyCatLadyApp">
+<html lang="en" data-ng-app="warbandApp">
 
 <head>
     <title>Mordheim Warband Builder</title>
