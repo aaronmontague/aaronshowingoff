@@ -1,8 +1,8 @@
 (function() {
     var warbandsFactory = function() {
         var warbands = [
-            { id: 1, name: 'Crushers', born: '2012-02-18', city: 'Peioria', members: [{ name: 'Bouncy' }, { name: 'Spazzo' }] },
-            { id: 2, name: 'Minx', born: '2012-04-11', city: 'Brandon', members: [{ name: 'You!' }, { name: 'Funny Girl' }] }
+            { id: 1, name: 'Crushers', type: 'Beastmen', members: [{ name: 'Rend' }, { name: 'Chopper' }] },
+            { id: 2, name: 'Minx', type: 'Sisters of Sigmar', members: [{ name: 'Dalia' }, { name: 'Sister Agnus' }] }
         ];
 
         var factory = {};

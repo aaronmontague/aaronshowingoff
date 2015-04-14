@@ -1,19 +1,16 @@
 <h2>{{ warbandSettings.title }}</h2>
     Search by Name: <input type="text" data-ng-model="customerFilter.name" />
-    Search by City: <input type="text" data-ng-model="customerFilter.city" />
-
+    
 <table>
     <tr>
         <th data-ng-click="doSort('name')">Name</th>
-        <th data-ng-click="doSort('city')">City</th>
-        <th data-ng-click="doSort('born')">Born</th>
+        <th data-ng-click="doSort('type')">Type</th>
         <th></th>
     </tr>
     <tr data-ng-repeat="warband in warbands | filter:customerFilter | orderBy:sortBy:!reverse">
         <td>{{ warband.name}}</td>
-        <td>{{ warband.city}}</td>
-        <td>{{ warband.born | date:'longDate'}}</td>
-        <td><a href="#/warbandMember/{{ warband.id }}">Members</a></td>
+        <td>{{ warband.type}}</td>
+        <td><a href="#/warbands/{{ warband.id }}">Members</a></td>
     </tr>
 </table>
 <br />

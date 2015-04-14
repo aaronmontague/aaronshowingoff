@@ -2,14 +2,14 @@
 
     var warbandMembers = function ($scope, $routeParams, warbandsFactory) {
 
-        var warbandMemberId = $routeParams.warbandMemberID;
-        $scope.warbandMemberNames = "Rex";
+        var warbandId = $routeParams.warbandId;
+        $scope.warbandMemberNames = null;
 
         function init() {
-            //search warbandMembers for the correct MemberID
+            //search warbandMembers for the correct Members
             for (var i = 0, len = $scope.warbands.length; i < len; i++) {
-                if ($scope.warbands[i].id === parseInt(warbandMemberId)) {
-                    $scope.warbandMemberNames += $scope.warbands[i].warbandMemberNames;
+                if ($scope.warbands[i].id === parseInt(warbandId)) {
+                    $scope.warbandMemberNames = $scope.warbands[i].members;
                     break;
                 }
             }

@@ -9,12 +9,12 @@
                 controller: 'WarbandsController',
                 templateUrl: 'warbandTemplate.html'
             })
-            .when('/warbands/:warbandID',
+            .when('/warbands/:warbandId',
             {
-                controller: 'WarbandsController',
-                templateUrl: 'warbandTemplate.html'
+                controller: 'WarbandMembersController',
+                templateUrl: 'warbandMemberTemplate.html'
             })
-            .when('/warbandMember/:warbandMemberID',
+            .when('/warbandMember/:warbandMemberId',
             {
                 controller: 'WarbandMembersController',
                 templateUrl: 'warbandMemberTemplate.html'
